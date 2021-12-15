@@ -51,7 +51,7 @@ p {
     height: 100vh;
     background-image: url("https://assets.codepen.io/6060109/ZigZag.png");
     background-size: cover;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 
 }
@@ -61,7 +61,7 @@ p {
     width: 80%;
     min-width: 300px;
     max-width: 380px;
-    height: 600px;
+    min-height: 65vh;
     margin: 70px auto;
     background: white;
     position: relative;
@@ -83,7 +83,7 @@ p {
     flex-direction: column;
     /* box-sizing: border-box; */
     align-items: center;
-    margin: 65px 0;
+    margin: 65px 0 20px;
 }
 
 .inner-panel-content>img {
@@ -123,14 +123,15 @@ p {
 
 .btn {
     display: flex;
-    width: 280px;
-    height: 50px;
-    background: #46A67E;
-    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
-    border-radius: 5px;
-    margin: 10px 24px;
     justify-content: center;
     align-items: center;
+    width: 280px;
+    min-height: 50px;
+    background: #46A67E;
+    border-radius: 5px;
+    margin: 10px 24px 20px 24px;
+    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .btn>p {
@@ -140,4 +141,26 @@ p {
     font-size: 15px;
     line-height: 18px;
 
+}
+
+.progress-dot-container {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    margin: 15px 0 0;
+
+
+}
+
+.progress-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #E0E0E0;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.progress-dot-active {
+    background: #67BD99;
 }

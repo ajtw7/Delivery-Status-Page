@@ -61,7 +61,7 @@ p {
     display: flex;
     width: 100%;
     height: 100vh;
-    justify-content: center;
+    /* justify-content: ; */
     align-items: center;
     background-image: url("https://assets.codepen.io/6060109/ZigZag.png");
     background-size: cover;
@@ -73,13 +73,14 @@ p {
     width: 80%;
     min-width: 300px;
     max-width: 380px;
-    /* min-height: 85vh; */
-    margin: 70px 0;
+    min-height: 85vh;
+    margin: 70px auto;
     background: white;
     position: relative;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    /* Zero l/r margin makes it possible for parent container to "justify-content" i.e bg-container */
+    /* padding: 5px 5px; */
+    /* justify-content: space-around; */
 
 }
 
@@ -161,7 +162,7 @@ p {
     box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
     border-radius: 5px;
     margin: 80px 24px 20px 24px;
-
+    
 
 }
 
@@ -188,25 +189,18 @@ p {
     background: #67BD99;
 }
 
-.step-1,
-.step-3 {
-    z-index: 1;
-    min-height: 550px;
-}
-
 .step-1 {
-    margin-right: -20px;
+    z-index: 1;
 }
-
-.step-3 {
-    margin-left: -20px;
-}
-
 
 .step-2 {
     z-index: 9;
-    /* width: 400px; */
 }
+
+.step-3 {
+    z-index: 1;
+}
+
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -219,6 +213,11 @@ p {
     }
 
     /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {}
+    @media only screen and (min-width: 768px) {
+        .step-1, .step-2 {
+            min-height: 75vh;
+            max-width: 100vw;
+        }
+    }
 
 }
